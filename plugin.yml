@@ -1,0 +1,11 @@
+name: ArenaPaintball
+main: mc.alk.paintball.Paintball
+version: 1.0
+depend: [BattleArena]
+authors: [alkarin_v]
+
+commands:
+   paintball:
+      aliases: [pb]
+      description: /paintball
+      usage: /paintball
