@@ -9,8 +9,6 @@ Paintball:
     rated: true # if database is enabled
     prefix: "&f[Paintball]&e"
     cmd: pb
-    nTeams: 4
-    teamSize: 2
     ### You can delete any stages/transitions that have no options
     ### for a list of options see wiki
     preReqs: ## Prerequisites for joining
