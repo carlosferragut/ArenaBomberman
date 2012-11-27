@@ -1,14 +1,14 @@
 package mc.alk.paintball;
 
-import mc.alk.arena.objects.MatchEventHandler;
 import mc.alk.arena.objects.arenas.Arena;
+import mc.alk.arena.objects.events.MatchEventHandler;
 
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 
 public class PaintballArena extends Arena{
 	static int damage = 20;
-	
+
 	/**
 	 * This is how you create customized events.  You specify a method as a @MatchEventHandler
 	 * and give it at least one bukkit event as the first argument.  In this case its EntityDamageByEntityEvent
@@ -18,7 +18,7 @@ public class PaintballArena extends Arena{
 	 * 2) player is still alive in the match
 	 *
 	 * @param event: Which bukkit event are we listening to
-	 */	
+	 */
 	@MatchEventHandler(suppressCastWarnings=true)
 	public void onEntityDamage(EntityDamageByEntityEvent event) {
 		if (event.isCancelled())

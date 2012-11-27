@@ -14,8 +14,11 @@ public class Paintball extends JavaPlugin{
 		/// "Paintball": The name of our event
 		/// "pb": the name of our command ( who really wants to type in the entire word paintball?)
 		/// PaintballArena.class: which arena should this event use
-		/// Register a Paintball 
+		/// Register a Paintball
 		BattleArena.registerMatchType(this, "Paintball", "pb", PaintballArena.class);
+
+		/// create our default config if it doesn't exist
+		saveDefaultConfig();
 
 		/// Allow the damage to be set through the config.yml, if it exists and has the section: 'damage: <value>'
 		/// Like 'damage: 15'
