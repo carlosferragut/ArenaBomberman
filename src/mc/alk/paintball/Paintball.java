@@ -17,6 +17,8 @@ public class Paintball extends JavaPlugin{
 		/// Register a Paintball
 		BattleArena.registerMatchType(this, "Paintball", "pb", PaintballArena.class);
 
+		BattleArena.registerEventType(this, "EPaintball", "epb", PaintballArena.class);
+
 		/// create our default config if it doesn't exist
 		saveDefaultConfig();
 

@@ -1,0 +1,35 @@
+## This should be places in the plugin directory
+## for more help configuring see the wiki
+## https://github.com/alkarinv/BattleArena/wiki
+## Change this file to customize your event
+
+EPaintball:
+    enabled: true
+    command: epb
+    type: ePaintball
+    database: ePaintball # or delete if you dont want wins/losses/top, needs BattleTracker
+    prefix: "&a[ePaintball]&e"
+    nTeams: 2
+    teamSize: 1+
+    matchTime: 300
+    victoryCondition: highestKills
+    preReqs:
+        options: [clearInventory]
+    onJoin:
+        options: [teleportIn, woolTeams, pvpOff]
+    onPrestart:
+        options: [pvpOff]
+    onStart:
+        options: [pvpOn]
+    onComplete:
+        options: [teleportOut, clearInventory, deEnchant, undisguise]
+    onDeath:
+        options: [randomRespawn, clearInventory]
+    onSpawn:
+        options: [enchants, giveItems, health=20, hunger=20, deEnchant, invulnerable=2]
+        items:
+            - snow_ball: 128
+    winner:
+        options: [money=30,experience=100, health=20, hunger=20]
+    losers:
+        options: [money=15,experience=50, health=20, hunger=20]
