@@ -1,3 +1,4 @@
+configVersion: 2.0
 ## This should be places in the plugin directory
 ## for more help configuring see the wiki
 ## https://github.com/alkarinv/BattleArena/wiki
@@ -9,10 +10,17 @@ Paintball:
     rated: true # if database is enabled
     prefix: "&f[Paintball]&e"
     cmd: pb
+    nTeams: 2+
+    teamSize: 1+
+    victoryCondition: LastManStanding
     ### You can delete any stages/transitions that have no options
     ### for a list of options see wiki
     preReqs: ## Prerequisites for joining
-        options: [clearInventory]
+        options: []
+    onEnter:
+        options: [storeAll]
+    onLeave:
+        options: [restoreAll]
     onJoin:  ## when they join the match
         options: []
     onPreStart: ## x seconds before onStart
@@ -22,7 +30,7 @@ Paintball:
     onSpawn: ## what happens when a player spawns
         options: [giveItems, hunger=20, health=20]
         items: 
-            - snowball: 128
+            - snow_ball: 128
     onDeath: ## what happens when a player dies
         options: []
     onComplete: ## what happens when things end

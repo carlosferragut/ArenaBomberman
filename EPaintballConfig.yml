@@ -1,3 +1,4 @@
+configVersion: 2.0
 ## This should be places in the plugin directory
 ## for more help configuring see the wiki
 ## https://github.com/alkarinv/BattleArena/wiki
@@ -14,7 +15,11 @@ EPaintball:
     matchTime: 300
     victoryCondition: highestKills
     preReqs:
-        options: [clearInventory]
+        options: []
+    onEnter:
+        options: [storeAll]
+    onLeave:
+        options: [restoreAll]
     onJoin:
         options: [teleportIn, woolTeams, pvpOff]
     onPrestart:
@@ -22,7 +27,7 @@ EPaintball:
     onStart:
         options: [pvpOn]
     onComplete:
-        options: [teleportOut, clearInventory, deEnchant, undisguise]
+        options: [teleportOut]
     onDeath:
         options: [randomRespawn, clearInventory]
     onSpawn:
