@@ -9,15 +9,15 @@ public class Paintball extends JavaPlugin{
 
 	@Override
 	public void onEnable(){
-		/// Registers this plugin with BattleArena with a Paintball match type, for 1v1, 1v4, 2v2,etc matches
+		/// Registers this plugin with BattleArena
 		/// this: our plugin
-		/// "Paintball": The name of our event
-		/// "pb": the name of our command ( who really wants to type in the entire word paintball?)
-		/// PaintballArena.class: which arena should this event use
+		/// "Paintball": The name of our competition
+		/// "pb": the name of our command alias ( who really wants to type in the entire word paintball?)
+		/// PaintballArena.class: which arena should this competition use
 		/// Register a Paintball
-		BattleArena.registerMatchType(this, "Paintball", "pb", PaintballArena.class);
+		BattleArena.registerCompetition(this, "Paintball", "pb", PaintballArena.class);
 
-		BattleArena.registerEventType(this, "EPaintball", "epb", PaintballArena.class);
+		BattleArena.registerCompetition(this, "EPaintball", "epb", PaintballArena.class);
 
 		/// create our default config if it doesn't exist
 		saveDefaultConfig();

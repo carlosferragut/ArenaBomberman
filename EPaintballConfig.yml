@@ -10,10 +10,11 @@ EPaintball:
     type: ePaintball
     database: ePaintball # or delete if you dont want wins/losses/top, needs BattleTracker
     prefix: "&a[ePaintball]&e"
-    nTeams: 2
-    teamSize: 1+
+    joinType: JoinPhase
+    victoryCondition: LastManStanding
+    nTeams: 2+
+    teamSize: 1
     matchTime: 300
-    victoryCondition: highestKills
     preReqs:
         options: []
     onEnter:
