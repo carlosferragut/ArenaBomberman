@@ -2,7 +2,6 @@ package mc.alk.paintball;
 
 import mc.alk.arena.objects.arenas.Arena;
 import mc.alk.arena.objects.events.MatchEventHandler;
-import mc.alk.arena.util.NotifierUtil;
 
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -26,7 +25,6 @@ public class PaintballArena extends Arena{
 			return;
 		if (event.getDamager().getType() != EntityType.SNOWBALL)
 			return;
-		NotifierUtil.notify("pb", "Changing snowball damage to " + damage +"  ");
 		event.setDamage(damage);
 	}
 }

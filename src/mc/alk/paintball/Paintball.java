@@ -17,21 +17,31 @@ public class Paintball extends JavaPlugin{
 		/// Register a Paintball
 		BattleArena.registerCompetition(this, "Paintball", "pb", PaintballArena.class);
 
-		BattleArena.registerCompetition(this, "EPaintball", "epb", PaintballArena.class);
-
 		/// create our default config if it doesn't exist
 		saveDefaultConfig();
 
-		/// Allow the damage to be set through the config.yml, if it exists and has the section: 'damage: <value>'
-		/// Like 'damage: 15'
-		FileConfiguration config = getConfig();
-		PaintballArena.damage = config.getInt("damage", 20);
+		/// Load our config options
+		loadConfig();
+
 		Log.info("[" + getName()+ "] v" + getDescription().getVersion()+ " enabled!");
 	}
 
 	@Override
 	public void onDisable(){
 		Log.info("[" + getName()+ "] v" + getDescription().getVersion()+ " stopping!");
+	}
+
+	@Override
+	public void reloadConfig(){
+		super.reloadConfig();
+		loadConfig();
+	}
+
+	public void loadConfig(){
+		/// Allow the damage to be set through the config.yml, if it exists and has the section: 'damage: <value>'
+		/// Like 'damage: 15'
+		FileConfiguration config = getConfig();
+		PaintballArena.damage = config.getInt("damage", 20);
 	}
 
 }
