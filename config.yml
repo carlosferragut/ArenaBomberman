@@ -1,3 +1,9 @@
 
-## Set the damage of the paintballs
-damage: 20
+items:
+  ## Set the arrow options
+  arrow:
+    damage: 20
+    velocity: 3
+  iron_sword:
+    damage: 2
+  ### You can set more properties for other weapons below
