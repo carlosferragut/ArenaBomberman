@@ -1,10 +1,11 @@
 package mc.alk.paintball;
 
 import mc.alk.arena.objects.arenas.Arena;
-import mc.alk.arena.objects.events.MatchEventHandler;
+import mc.alk.arena.objects.events.ArenaEventHandler;
 
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityDamageEvent;
 
 public class PaintballArena extends Arena{
 	static int damage = 20;
@@ -19,11 +20,10 @@ public class PaintballArena extends Arena{
 	 *
 	 * @param event: Which bukkit event are we listening to
 	 */
-	@MatchEventHandler(suppressCastWarnings=true)
-	public void onEntityDamage(EntityDamageByEntityEvent event) {
-		if (event.isCancelled())
-			return;
-		if (event.getDamager().getType() != EntityType.SNOWBALL)
+	@ArenaEventHandler(suppressCastWarnings=true)
+	public void onEntityDamage(EntityDamageEvent event) {
+		if (event.isCancelled() || !(event instanceof EntityDamageByEntityEvent) ||
+				((EntityDamageByEntityEvent)event).getDamager().getType() != EntityType.SNOWBALL)
 			return;
 		event.setDamage(damage);
 	}

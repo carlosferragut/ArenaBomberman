@@ -11,11 +11,14 @@ Paintball:
     prefix: "&f[Paintball]&e"
     cmd: pb
     joinType: Queue
-    victoryCondition: LastManStanding
+    victoryCondition: HighestKills
+    nLives: 1
     nTeams: 2
     teamSize: 1
     ### You can delete any stages/transitions that have no options
     ### for a list of options see wiki
+    defaults: ## options for entire game
+        options: [woolTeams]
     preReqs: ## Prerequisites for joining
         options: []
     onEnter:
