@@ -1,4 +1,4 @@
-package mc.alk.bomberman;
+package mc.ski.bomberman;
 
 import mc.alk.arena.BattleArena;
 import mc.alk.arena.util.Log;
