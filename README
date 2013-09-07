@@ -1,7 +1,6 @@
-ArenaPaintball
+ArenaBomberman
 
-A plugin to demonstrate the BattleArena platform for creating custom events
+A plugin to extend BattleArena plattform
 
 Versions:
-1.1: Updating to reflect new BattleArena api changes
 1.0: initial releasee
