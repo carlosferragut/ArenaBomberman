@@ -1,4 +1,4 @@
-package mc.alk.paintball;
+package mc.alk.bomberman;
 
 import mc.alk.arena.objects.arenas.Arena;
 import mc.alk.arena.objects.events.ArenaEventHandler;
@@ -7,7 +7,7 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 
-public class PaintballArena extends Arena{
+public class BombermanArena extends Arena{
 	static int damage = 20;
 
 	/**
