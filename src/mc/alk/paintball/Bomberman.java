@@ -1,4 +1,4 @@
-package mc.alk.paintball;
+package mc.alk.bomberman;
 
 import mc.alk.arena.BattleArena;
 import mc.alk.arena.util.Log;
@@ -15,7 +15,7 @@ public class Paintball extends JavaPlugin{
 		/// "pb": the name of our command alias ( who really wants to type in the entire word paintball?)
 		/// PaintballArena.class: which arena should this competition use
 		/// Register a Paintball
-		BattleArena.registerCompetition(this, "Paintball", "pb", PaintballArena.class);
+		BattleArena.registerCompetition(this, "Bomberman", "bm", BombermanArena.class);
 
 		/// create our default config if it doesn't exist
 		saveDefaultConfig();
@@ -41,7 +41,7 @@ public class Paintball extends JavaPlugin{
 		/// Allow the damage to be set through the config.yml, if it exists and has the section: 'damage: <value>'
 		/// Like 'damage: 15'
 		FileConfiguration config = getConfig();
-		PaintballArena.damage = config.getInt("damage", 20);
+		BombermanArena.damage = config.getInt("damage", 20);
 	}
 
 }
