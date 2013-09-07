@@ -1,20 +1,20 @@
-configVersion: 2.0
+configVersion: 1.0
 ## This should be places in the plugin directory
 ## for more help configuring see the wiki
 ## https://github.com/alkarinv/BattleArena/wiki
 ## Change this file to customize your event
 
-Paintball:
+Bomberman:
     enabled: true
-    database: Paintball # or delete if you dont want wins/losses/top, needs BattleTracker
+    database: Bomberman # or delete if you dont want wins/losses/top, needs BattleTracker
     rated: true # if database is enabled
-    prefix: "&f[Paintball]&e"
+    prefix: "&f[Bomberman]&e"
     cmd: pb
     joinType: Queue
     victoryCondition: HighestKills
-    nLives: 1
+    nLives: 3
     nTeams: 2
-    teamSize: 1
+    teamSize: 2
     ### You can delete any stages/transitions that have no options
     ### for a list of options see wiki
     defaults: ## options for entire game
@@ -34,7 +34,7 @@ Paintball:
     onSpawn: ## what happens when a player spawns
         options: [giveItems, hunger=20, health=20]
         items: 
-            - snow_ball: 128
+            - TNT: 46
     onDeath: ## what happens when a player dies
         options: []
     onComplete: ## what happens when things end
