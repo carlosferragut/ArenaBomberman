@@ -13,8 +13,8 @@ Bomberman:
     joinType: Queue
     victoryCondition: HighestKills
     nLives: 3
-    nTeams: 2
-    teamSize: 2
+    nTeams: 4
+    teamSize: 1
     ### You can delete any stages/transitions that have no options
     ### for a list of options see wiki
     defaults: ## options for entire game
